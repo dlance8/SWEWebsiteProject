@@ -8,14 +8,12 @@
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Donate</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Donate.css" media="screen">
+    <link rel="stylesheet" href="Donate.css" media="screen">
+    <script src="test.js"></script>
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.0.9, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-
-
-
 
 
     <script type="application/ld+json">{
@@ -96,75 +94,131 @@
       </div>
     </section>
     <section class="u-clearfix u-palette-1-dark-1 u-section-3" id="sec-4823">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-container-style u-group u-palette-1-base u-shape-rectangle u-group-1">
-          <div class="u-container-layout u-container-layout-1">
-            <h1 class="u-heading-font u-text u-text-default u-title u-text-1">Payment Method</h1>
-            <div class="u-container-style u-group u-radius-10 u-shape-round u-white u-group-2">
-              <div class="u-container-layout u-container-layout-2">
-                <h4 class="u-align-center u-text u-text-default u-text-2">Card</h4>
-                <div class="u-palette-4-base u-shape u-shape-circle u-shape-1"></div>
+        <div class="u-clearfix u-sheet u-sheet-1">
+          <div class="u-container-style u-group u-palette-1-base u-shape-rectangle u-group-1">
+            <div class="u-container-layout u-container-layout-1">
+              <h1 class="u-heading-font u-text u-text-default u-title u-text-1">Payment Method</h1>
+              <div class="u-container-style u-group u-radius-10 u-shape-round u-white u-group-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <input type="radio" id="CC" name="pmethod" value="CCnumber" onclick="showCard()">
+                    <label for="CC">Credit Card</label><br>
+                </div>
               </div>
-            </div>
-            <div class="u-container-style u-group u-radius-10 u-shape-round u-white u-group-3">
-              <div class="u-container-layout u-container-layout-3">
-                <h4 class="u-align-center u-text u-text-default u-text-3">Check</h4>
-                <div class="u-palette-4-base u-shape u-shape-circle u-shape-2"></div>
+              <div class="u-container-style u-group u-radius-10 u-shape-round u-white u-group-3">
+                <div class="u-container-layout u-container-layout-3">
+                  <input type="radio" id="Check" name="pmethod" value="CheckInfo" onclick="showCheck()">
+                    <label for="Check">Check</label><br>
+                </div>
               </div>
-            </div>
-            <img src="images/112121121.JPG" alt="" class="u-image u-image-round u-radius-32 u-image-1" data-image-width="572" data-image-height="164" data-href="https://www.paypal.com/us/home" data-target="_blank">
-            <div class="u-form u-form-1">
-              <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
-                <div class="u-form-group u-form-radiobutton u-form-group-1">
-                  <div class="u-form-radio-button-wrapper">
-                    <input type="radio" name="radiobutton" value="One-Time Donation">
-                    <label class="u-label u-label-1" for="radiobutton">One-Time Donation</label>
-                    <br>
-                    <input type="radio" name="radiobutton" value="Monthly Donation">
-                    <label class="u-label u-label-2" for="radiobutton">Monthly Donation</label>
-                    <br>
-                  </div>
+              <img src="images/112121121.JPG" alt="" class="u-image u-image-round u-radius-32 u-image-1" data-image-width="572" data-image-height="164" data-href="https://www.paypal.com/us/home" data-target="_blank">
+              <div id="card" style="display:none">
+                <div class="u-form u-form-1">
+                  <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
+                    <div class="u-form-group u-form-radiobutton u-form-group-1">
+                      <div class="u-form-radio-button-wrapper">
+                        <input type="radio" name="radiobutton" value="One-Time Donation">
+                        <label class="u-label u-label-1" for="radiobutton">One-Time Donation</label>
+                        <br>
+                        <input type="radio" name="radiobutton" value="Monthly Donation">
+                        <label class="u-label u-label-2" for="radiobutton">Monthly Donation</label>
+                        <br>
+                      </div>
+                    </div>
+                    <div class="u-form-group u-form-group-2">
+                      <label for="text-86de" class="u-form-control-hidden u-label u-label-3"></label>
+                      <input type="text" placeholder="$0.00" id="text-86de" name="text-3" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+                    </div>
+                    <div class="u-form-group u-form-name">
+                      <label for="name-3b9a" class="u-form-control-hidden u-label u-label-4">Name</label>
+                      <input type="text" placeholder="First Name" id="name-3b9a" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+                    </div>
+                    <div class="u-form-group u-form-name u-form-group-4">
+                      <label for="name-d119" class="u-form-control-hidden u-label u-label-5">Name</label>
+                      <input type="text" placeholder="Last Name" id="name-d119" name="name-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+                    </div>
+                    <div class="u-form-email u-form-group">
+                      <label for="email-3b9a" class="u-form-control-hidden u-label u-label-6">Email</label>
+                      <input type="email" placeholder="Enter a valid email address" id="email-3b9a" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+                    </div>
+                    <div class="u-form-group u-form-group-6">
+                      <label for="text-17f4" class="u-form-control-hidden u-label u-label-7"></label>
+                      <input type="text" placeholder="Billing Address" id="text-17f4" name="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+                    </div>
+                    <div class="u-form-group u-form-group-7">
+                      <label for="text-7190" class="u-form-control-hidden u-label u-label-8"></label>
+                      <input type="text" placeholder="Credit Card Number" id="text-7190" name="text-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+                    </div>
+                    <div class="u-form-group u-form-group-8">
+                      <label for="text-690f" class="u-form-control-hidden u-label u-label-9"></label>
+                      <input type="text" placeholder="CVC" id="text-690f" name="text-2" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+                    </div>
+                    <div class="u-align-left u-form-group u-form-submit">
+                      <a href="#" class="u-btn u-btn-submit u-button-style">Submit</a>
+                      <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+                  </form>
                 </div>
-                <div class="u-form-group u-form-group-2">
-                  <label for="text-86de" class="u-form-control-hidden u-label u-label-3"></label>
-                  <input type="text" placeholder="$Donation Amount" id="text-86de" name="text-3" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+              </div>
+
+              <div id='check' style="display:none">
+                <div class="u-form u-form-1">
+                  <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
+                    <div class="u-form-group u-form-radiobutton u-form-group-1">
+                      <div class="u-form-radio-button-wrapper">
+                        <input type="radio" name="radiobutton" value="One-Time Donation">
+                        <label class="u-label u-label-1" for="radiobutton">One-Time Donation</label>
+                        <br>
+                        <input type="radio" name="radiobutton" value="Monthly Donation">
+                        <label class="u-label u-label-2" for="radiobutton">Monthly Donation</label>
+                        <br>
+                      </div>
+                    </div>
+                    <div class="u-form-group u-form-group-2">
+                      <label for="text-86de" class="u-form-control-hidden u-label u-label-3"></label>
+                      <input type="text" placeholder="$0.00" id="text-86de" name="text-3" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+                    </div>
+                    <div class="u-form-group u-form-name">
+                      <label for="name-3b9a" class="u-form-control-hidden u-label u-label-4">Name</label>
+                      <input type="text" placeholder="First Name" id="name-3b9a" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+                    </div>
+                    <div class="u-form-group u-form-name u-form-group-4">
+                      <label for="name-d119" class="u-form-control-hidden u-label u-label-5">Name</label>
+                      <input type="text" placeholder="Last Name" id="name-d119" name="name-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+                    </div>
+                    <div class="u-form-email u-form-group">
+                      <label for="email-3b9a" class="u-form-control-hidden u-label u-label-6">Email</label>
+                      <input type="email" placeholder="Enter a valid email address" id="email-3b9a" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+                    </div>
+                    <div class="u-form-group u-form-group-6">
+                      <label for="text-17f4" class="u-form-control-hidden u-label u-label-7"></label>
+                      <input type="text" placeholder="Billing Address" id="text-17f4" name="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+                    </div>
+                    <div class="u-form-group u-form-group-7">
+                      <label for="text-7190" class="u-form-control-hidden u-label u-label-8"></label>
+                      <input type="text" placeholder="Account Number" id="text-7190" name="text-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+                    </div>
+                    <div class="u-form-group u-form-group-8">
+                      <label for="text-690f" class="u-form-control-hidden u-label u-label-9"></label>
+                      <input type="text" placeholder="Routing Number" id="text-690f" name="text-2" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+                    </div>
+                    <div class="u-align-left u-form-group u-form-submit">
+                      <a href="#" class="u-btn u-btn-submit u-button-style">Submit</a>
+                      <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+                  </form>
                 </div>
-                <div class="u-form-group u-form-name">
-                  <label for="name-3b9a" class="u-form-control-hidden u-label u-label-4">Name</label>
-                  <input type="text" placeholder="First Name" id="name-3b9a" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
-                </div>
-                <div class="u-form-group u-form-name u-form-group-4">
-                  <label for="name-d119" class="u-form-control-hidden u-label u-label-5">Name</label>
-                  <input type="text" placeholder="Last Name" id="name-d119" name="name-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
-                </div>
-                <div class="u-form-email u-form-group">
-                  <label for="email-3b9a" class="u-form-control-hidden u-label u-label-6">Email</label>
-                  <input type="email" placeholder="Enter a valid email address" id="email-3b9a" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
-                </div>
-                <div class="u-form-group u-form-group-6">
-                  <label for="text-17f4" class="u-form-control-hidden u-label u-label-7"></label>
-                  <input type="text" placeholder="Billing Address" id="text-17f4" name="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
-                </div>
-                <div class="u-form-group u-form-group-7">
-                  <label for="text-7190" class="u-form-control-hidden u-label u-label-8"></label>
-                  <input type="text" placeholder="Account/Credit Card" id="text-7190" name="text-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
-                </div>
-                <div class="u-form-group u-form-group-8">
-                  <label for="text-690f" class="u-form-control-hidden u-label u-label-9"></label>
-                  <input type="text" placeholder="Routing/CVC" id="text-690f" name="text-2" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
-                </div>
-                <div class="u-align-left u-form-group u-form-submit">
-                  <a href="#" class="u-btn u-btn-submit u-button-style">Submit</a>
-                  <input type="submit" value="submit" class="u-form-control-hidden">
-                </div>
-                <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-                <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
-                <input type="hidden" value="" name="recaptchaResponse">
-              </form>
+              </div>
+
+
             </div>
           </div>
         </div>
-      </div>
     </section>
     <section class="u-align-left u-clearfix u-palette-1-base u-section-4" id="sec-b3f4">
       <div class="u-clearfix u-sheet u-sheet-1">
